@@ -5,7 +5,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan(value={"com.plz.pams_back.mapper"})
 public class PamsBackApplication {
 
 	public static void main(String[] args) {
