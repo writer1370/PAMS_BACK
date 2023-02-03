@@ -7,5 +7,28 @@
              , notice_title AS TITLE
           FROM plz.NOTICE
     </select>
+    
+    <select id="selectNoticeDetail" parameterType="java.lang.String" resultType="Notice">
+        SELECT notice_id AS ID
+             , notice_title AS TITLE
+        FROM plz.NOTICE
+       WHERE notice_id = #{num}
+    </select>
+
+    <insert id="insertNotice" parameterType="com.plz.pams_back.dto.NoticeDto">
+        INSERT
+          INTO plz.NOTICE
+            (
+             NOTICE_ID
+             ,NOTICE_TITLE
+             ,EMP_NO
+            )
+        VALUES
+            (
+             '110'
+             ,#{noticeTitle}
+             ,'1111'
+            )
+    </insert>
 
 </mapper>

@@ -1,5 +1,6 @@
 package com.plz.pams_back.service.impl;
 
+import com.plz.pams_back.dto.NoticeDto;
 import com.plz.pams_back.entity.Notice;
 import com.plz.pams_back.mapper.NoticeMapper;
 import com.plz.pams_back.service.NoticeService;
@@ -17,5 +18,15 @@ public class NoticeServiceImpl implements NoticeService {
     @Override
     public List<Notice> selectNoticeList() {
         return noticeMapper.selectNoticeList();
+    }
+
+    @Override
+    public int insertNotice(NoticeDto noticeDto) {
+        return noticeMapper.insertNotice(noticeDto);
+    }
+
+    @Override
+    public Notice selectNoticeDetail(String num) {
+        return noticeMapper.selectNoticeDetail(num);
     }
 }
